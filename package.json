@@ -1,0 +1,22 @@
+{
+  "name": "sass-tools",
+  "version": "1.0.0",
+  "description": "Some handy sass functions I like to reuse in projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikFontanel/sass-tools.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Erik Gelderblom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErikFontanel/sass-tools/issues"
+  },
+  "homepage": "https://github.com/ErikFontanel/sass-tools#readme"
+}
