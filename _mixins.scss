@@ -1,0 +1,37 @@
+@mixin clearfix {
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}
+@mixin get-vw($target) {
+  @each $item, $breakpoint in $breakpoints {
+    @if $breakpoint == 0 {
+      $breakpoint: map-get($breakpoints, medium);
+    }
+    $vw-context: (strip-unit($breakpoint) * .01) * 1;
+
+    @include breakpoint($breakpoint) {
+      font-size: ($target / $vw-context) * 1vw;;
+    }
+  }
+}
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@function w($width, $viewport : 1660) {
+  @if $viewport == 0 {
+    $viewport: 375;
+  }
+  $viewport: strip-unit($viewport);
+
+  @return ($width / $viewport) * 100vw;
+}
+
+@function rem($num) {
+  @return rem-calc($num);
+}
